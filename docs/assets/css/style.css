@@ -34,16 +34,21 @@ header p {
 }
 
 #content {
-	display: block;
+	display: flex;
+	align-items: flex-start;
 	min-height: auto;
 }
 
 aside {
-	width: 100%;
+	width: 260px;
+	flex: 0 0 260px;
 	background-color: #f8f8f8;
 	padding: 20px;
-	border-right: none;
-	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	position: sticky;
+	top: 0;
+	max-height: 100vh;
+	overflow-y: auto;
 }
 
 .left-title {
@@ -85,6 +90,7 @@ aside {
 
 .inner {
 	flex: 1;
+	min-width: 0;
 	padding: 30px 40px;
 }
 
@@ -121,4 +127,20 @@ footer {
 	padding: 20px;
 	margin-top: 40px;
 	font-size: 12px;
+}
+
+@media (max-width: 900px) {
+	#content {
+		display: block;
+	}
+
+	aside {
+		width: 100%;
+		flex: none;
+		position: static;
+		max-height: none;
+		overflow-y: visible;
+		border-right: none;
+		border-bottom: 1px solid #ddd;
+	}
 }
