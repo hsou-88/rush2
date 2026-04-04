@@ -34,15 +34,16 @@ header p {
 }
 
 #content {
-	display: flex;
+	display: block;
 	min-height: auto;
 }
 
 aside {
-	width: 220px;
+	width: 100%;
 	background-color: #f8f8f8;
 	padding: 20px;
-	border-right: 1px solid #ddd;
+	border-right: none;
+	border-bottom: 1px solid #ddd;
 }
 
 .left-title {
