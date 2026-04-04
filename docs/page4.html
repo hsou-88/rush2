@@ -21,7 +21,7 @@ initial keys can’t be removed.</li>
 <ul>
   <li>The entries of the dictionary can be stored in any order.</li>
 </ul>
-<p>辞書はソートされておかれている必要はない．</p>
+<p>辞書はソートされておかれている必要はない．行の入れ替えに関しては自由に置かれている固定のループ処理をしていると条件分岐でエラーがおきる</p>
 <ul>
   <li>値が変更されたらどのようになるのが適切か</li>
 </ul>
@@ -38,10 +38,25 @@ initial keys can’t be removed.</li>
 <p>一番簡単な問題がCSVファイルの解析でそこから考えていけば，難易度を緩やかに上げられそう．</p>
 <a href="https://note.com/oomomitake/n/ne3ee6776def0" target="_blank" rel="noopener noreferrer">例えばこれ</a>
 <ul>
-  <li></li>
+  <li>:(コロン)を外したり，keyとvalueの入れ替えは今回可能なのか</li>
 </ul>
-<p></p>
+<p>できない，実装で考えてみると，valueに数字が入る可能性もあり，コロンがなければ解析ができない．同様にkeyとvalueが入れ替わるとvalueに数字が入る可能性もあるので，keyとvalueの明確な区別ができなくなる.</p>
 <ul>
-  <li></li>
+  <li>パースエラーとして扱うような例</li>
 </ul>
-<p></p>
+<p>コロン : が複数ある，左側が数値でないとき,左側が空のとき,右側が空,スペースのみ含まれるとき(スペースはtrimされるから右側が空と同じ扱いになる)
+</p>
+<ul>
+  <li>If the dictionary does not allow you to perform the conversion of the provided
+number, your program must output "Dict Error\n".</li>
+</ul>
+<p>入力の数値に対して，対応する文字列がないときはDict Errorとする一部が存在するからと言って翻訳はしない.</div></p>
+<ul>
+  <li>ハッシュ,ソート済み配列,構造体ノードどれがいいか</li>
+</ul>
+<p>構造体がいいように思えているが，フローチャートなどで実装のイメージを作ってから判断</p>
+<ul>
+  <li>If you have any errors from the dictionary parsing, your program must output
+"Dict Error\n".</li>
+</ul>
+<p>一つでも辞書形式の不正があったら，エラー．変換できる値が来ていたとしてもだめ．</p>
