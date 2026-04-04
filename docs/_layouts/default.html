@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>{{ page.title }} - RUSH02</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+<h1>RUSH02</h1>
+<p>dictionaryから考える様々なアイデア</p>
+</header>
+
+<div id="outer">
+<div id="content">
+<aside>
+<div class="left-title">目次</div>
+<div class="link">
+<ul>
+<li><a href="index.html" {% if page.url == '/' %}class="active"{% endif %}>ホーム</a></li>
+<li><a href="page1.html" {% if page.url == '/page1.html' %}class="active"{% endif %}>課題の要件定義</a></li>
+<li><a href="page2.html" {% if page.url == '/page2.html' %}class="active"{% endif %}>システムコール</a></li>
+<li><a href="page3.html" {% if page.url == '/page3.html' %}class="active"{% endif %}>構造体</a></li>
+</ul>
+</div>
+</aside>
+<div class="inner">
+{{ content }}
+</div>
+</div>
+</div>
+<footer>© 2026 shirano</footer>
+</body>
+</html>
