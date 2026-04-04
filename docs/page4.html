@@ -9,29 +9,34 @@ title: エラーハンドリング
 <p>QA形式で壁打ちしながら整理します。</p>
 <h3>事例</h3>
 <ul>
-  <li></li>
+  <li>The dictionary will have the following rules:[a number][0 to n spaces]:[0 to n spaces][any printable characters]\n</li>
 </ul>
-<p></p>
+<p>辞書の形式は数値の後にスペースとコロンが続いて，さらにスペースが含まれた後に任意の印刷可能な文字が続く形になる．</p>
 <ul>
-  <li></li>
+  <li>The dictionary will always have at least the keys contained in the reference
+dictionary. Their values can be modified, more entries can be added, but the
+initial keys can’t be removed.</li>
 </ul>
-<p></p>
+<p>配布された辞書に入っていたキーは必ず含まれていることが保証されている．単語に関しては変更可能で，更なるキーと単語の追加は可能．</p>
 <ul>
-  <li></li>
+  <li>The entries of the dictionary can be stored in any order.</li>
 </ul>
-<p></p>
+<p>辞書はソートされておかれている必要はない．</p>
 <ul>
-  <li></li>
+  <li>値が変更されたらどのようになるのが適切か</li>
 </ul>
-<p></p>
+<p>位のルールを維持したまま，辞書に登録された文字を出力するのが正しいそう．</p>
 <ul>
-  <li></li>
+  <li>Your program should handle numbers beyond the range of unsigned int</li>
 </ul>
-<p></p>
+<p>unsigned int は0 ~ 4,294,967,295までの値に対応.</p>
+<p>辞書に1000000000000000000000000000000000000: undecillionがあることからlonglong int と atoiを使って数値処理する実装は今回使えなさそう</p>
 <ul>
-  <li></li>
+  <li>文字列で扱うということは，言語の構文解析のようなものに近いだろうか?</li>
 </ul>
-<p></p>
+<p>似たような事例を見つけることはできた．CSVファイルのパース問題で，CSVはカンマ区切りに成型されていることからそれがコロンに置き換わり，単語と数値につながりができたイメージ</p>
+<p>一番簡単な問題がCSVファイルの解析でそこから考えていけば，難易度を緩やかに上げられそう．</p>
+<a href="https://note.com/oomomitake/n/ne3ee6776def0" target="_blank" rel="noopener noreferrer">例えばこれ</a>
 <ul>
   <li></li>
 </ul>
